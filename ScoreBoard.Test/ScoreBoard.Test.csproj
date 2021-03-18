@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScoreBoard.Application\ScoreBoard.Application.csproj" />
+    <ProjectReference Include="..\ScoreBoard.Core\ScoreBoard.Core.csproj" />
+  </ItemGroup>
+
 </Project>
