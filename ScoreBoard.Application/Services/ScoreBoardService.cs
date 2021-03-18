@@ -13,7 +13,7 @@ namespace ScoreBoard.Services
 
         public ScoreBoardService(List<Game> games)
         {
-
+            _games = games;
         }
 
         public bool FinishGame(int idGame)
