@@ -3,6 +3,7 @@ using ScoreBoard.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace ScoreBoard.Services
 {
@@ -12,9 +13,10 @@ namespace ScoreBoard.Services
         private List<Game> _games = new List<Game>();
         private int _idGame = 1;
 
-        public ScoreBoardService(List<Game> games)
+        public ScoreBoardService([Optional]List<Game> games)
         {
-            _games = games;
+            if (games != null)
+                _games = games;
         }
 
         /// <summary>
