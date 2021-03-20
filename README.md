@@ -5,22 +5,28 @@
 ScoreBoard.Core
 Entities "Team", "TeamGame", "Game"
 
-	- "Team" have the TeamName(string). Here we have the information about a team (here is only the name for this exercise), even can use it for others sports.
-	- "TeamGame" have the team(Team) and the score(int). Here we have the information of the team in a match, for this exercise only the score, but here we can have all the stats( shots, pass....).
-	- "Game" have two "TeamGame", one for home and other for away, and StartDate(Datetime), this will have the data of the game. Right now only have the two teams and the Date, but here we can have the information of the competition.....I add an Id for making an approximation of what an entity would be, and this allow us to finish a game easier than searching in the list for the teams, that can give us problems if we have to search a name and it is twice in the list, for example.
-	
+	- "Team" have the TeamName(string). Here we have the information about a team (foundation, stadium...), for this 
+	exercise is only the name. can use it for others sports.
+	- "TeamGame" have the team(Team) and the score(int). Here we have the information of the team in a match, for this
+	exercise only the score,  here we can have all the stats(shots, passes....).
+	- "Game" have two "TeamGame", one for home and other for away, and StartDate(Datetime), this will have the data of 
+	the game. Right now only  the two teams and the Date, but here we can have the information of the competition.....
+	I add an Id, this allow us to finish a game than search in the list for the teams.	
 
 ScoreBoard.Test functions
 	
 	StartGame: IsTrue for new games and IsFalse when a team is already playing a game
 	FinishGame: IsTrue when the id passed exists, IsFalse when not exists
-	UpdateScore: IsTrue when the id passed exists, IsFalse when not exists
+	UpdateScore: IsTrue when the id passed exists, IsFalse when not exists.
+	GetAllGames: Check that if not null the list returned. Check the type of the list returned.
 	
 ScoreBoard.Application functions
 	
-	StartGame: the parameters here are two string, for create the team name, but normally you will have your database and the parameters will be an id for the teams selected in a dropdown, for example. But for this exercise I make it like this.
-	FinishGame: the parameter is the id of the game to delete, nothing more.
-	UpdateScore: parameters are the id, homeTeamScore and awayTeamScore.
+	StartGame: the parameters here are two string, for create the team name, but normally you will have your database 
+	and the parameters will be an id for the teams selected in a dropdown, for example. But for this exercise we need
+	the names and create all the objects.
+	FinishGame: the parameter is the id of the game to delete.
+	UpdateScore: parameters are the ids, homeTeamScore and awayTeamScore.
 	
 	The functions of GetAllGames dont have any special construction, only the specified orders.
 
